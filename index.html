@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+    <style>
+        .ploader{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+        }
+
+        .preloader {
+            width: 100px;
+            height: 100px;
+            border: 8px solid #fff; /* Border color of your preloader */
+            border-top: 8px solid #3498db; /* Color of the animated spinner */
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="current-info">
+            <div class="others" id="current-weather-items"></div>
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 24 May
+                </div>
+                <div class="search-container">
+                    <input type="text" id="location-input" placeholder="Enter a location">&nbsp;&nbsp;
+                    <button class="button-89" id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tuesday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Wednesday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Saturday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sunday</div>
+                <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+    </div>
+    <div class="ploader"><div class="preloader" id="preloader"></div></div>
+    
+    <script>
+        // JavaScript to hide the preloader and the background after one second
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.ploader').style.display = 'none';
+            }, 1500); // Hide after 1000 milliseconds (1 second)
+        };
+    </script>
+    <script src="<script src=" https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+        integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
